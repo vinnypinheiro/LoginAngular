@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  background: #5b67cc;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

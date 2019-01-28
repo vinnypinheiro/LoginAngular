@@ -1,0 +1,31 @@
+<main>
+
+  <section class="login-section">
+    <header class="login-header">
+
+        <img class="lock-img" src="assets/image/lock.png">
+        <h1>Log in to our site</h1>
+        <h2>Enter username or password to log on.</h2>
+
+    </header>
+
+    <div class="form" >
+      <form [formGroup]="loginForm" (ngSubmit)="userLogin()" class="login-form" >
+        <input formControlName="username" name="username" type="text" placeholder="USERNAME"/>
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+          <div *ngIf="f.username.errors.required">Usermane is required</div>
+        </div>
+
+        <input formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" type="password" placeholder="PASSWORD"/>
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+          <div *ngIf="f.password.errors.required">Password is required</div>
+        </div>
+
+        <button type="submit">Sign in</button>
+        <p class="message">Dont have account? <a href="#">Sign up here.</a></p>
+      </form>
+    </div>
+
+  </section>
+
+</main>
